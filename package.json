@@ -4,6 +4,7 @@
   "description": "Native NodeJS module to decrypt media in-memory",
   "main": "src/index.ts",
   "scripts": {
+    "preinstall": "git submodule update --init",
     "install": "cmake-js compile",
     "test": "standard && node test/tests.js"
   },
