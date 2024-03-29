@@ -1,6 +1,6 @@
 # mp4decryptjs
 
-Take CENC media and decrypt it using [Bento4](https://github.com/axiomatic-systems/Bento4)'s `mp4decrypt`, within a node native module. Perfect for small files like DASH segments, and large files.
+Take Encrypted media and decrypt it using [Bento4](https://github.com/axiomatic-systems/Bento4)'s `mp4decrypt`, within a node native module. Perfect for small files like DASH segments, and large encrypted files.
 
 ## Example
 
@@ -11,9 +11,10 @@ const keys = {
   'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
 };
 
-//const encrypted = fs.readFileSync('enc.m4s');
-mp4decrypt("input.mp4", "output.mp4", keys).then(decrypted => {
-  fs.writeFileSync('dec.mp4', decrypted)
+mp4decrypt("input.mp4", "output.mp4", keys).then(success => {
+  if (success) {
+    //Do something here
+  }
 });
 ```
 
