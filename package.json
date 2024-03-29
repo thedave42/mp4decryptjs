@@ -4,9 +4,10 @@
   "description": "Native NodeJS module to decrypt media",
   "main": "lib/index.js",
   "scripts": {
-    "preinstall": "git submodule update --init",
-    "install": "cmake-js compile && npx tsc",
-    "test": "standard && node test/tests.js"
+    "setup": "git submodule update --init",
+    "install": "cmake-js compile",
+    "test": "standard && node test/tests.js",
+    "prepublish": "npx tsc"
   },
   "keywords": [
     "mp4",
