@@ -1,6 +1,6 @@
 // @ts-check
 
-const mp4decrypt = require('..')
+const mp4decrypt = require('..').default
 const fs = require('fs')
 const path = require('path')
 const MP4Box = require('mp4box')
@@ -46,8 +46,9 @@ async function main () {
  */
 async function doTest (t) {
   const src = readFile(t.original)
-  const encrypted = readFile(t.encrypted)
-  const decrypted = await mp4decrypt.decrypt(encrypted, t.keys)
+  // const encrypted = readFile(t.encrypted)
+  await mp4decrypt(path.join(__dirname, 'media', t.encrypted), path.join(__dirname, 'media', 'decrypted.mp4'), t.keys)
+  const decrypted = readFile('./decrypted.mp4')
 
   const srcSamples = await getSamples(src)
   const decSamples = await getSamples(decrypted)
