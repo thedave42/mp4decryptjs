@@ -1,6 +1,6 @@
 {
   "name": "mp4decryptjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Native NodeJS module to decrypt media",
   "main": "lib/index.js",
   "scripts": {

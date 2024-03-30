@@ -14,7 +14,7 @@ class ProgressListener : public AP4_Processor::ProgressListener {
 
 
 ProgressBar bar {
-  option::BarWidth{40},
+  option::BarWidth{terminal_width() - 45},
   option::Start{"["},
   option::Fill{"="},
   option::Lead{"="},
@@ -37,7 +37,7 @@ AP4_Result ProgressListener::OnProgress(unsigned int step, unsigned int total) {
     bar.set_option(option::Completed{false});
     bar.set_option(option::SavedStartTime{false});
   }
-  if (step % 5 == 0 || step == total) {
+  if (step % 15 == 0 || step == total) {
     bar.set_option(option::MaxProgress{total});
     bar.set_option(option::PostfixText{"Decrypting " + std::to_string(step) + "/" + std::to_string(total)});
     bar.set_progress(step);
