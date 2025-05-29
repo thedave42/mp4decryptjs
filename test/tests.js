@@ -26,6 +26,10 @@ const tests = [
   }
 ]
 
+const decryptProgress = (step, total) => {
+  console.log(`${step} / ${total}`)
+}
+
 main()
 
 async function main () {
@@ -47,7 +51,7 @@ async function main () {
 async function doTest (t) {
   const src = readFile(t.original)
   // const encrypted = readFile(t.encrypted)
-  await mp4decrypt(path.join(__dirname, 'media', t.encrypted), path.join(__dirname, 'media', 'decrypted.mp4'), t.keys)
+  await mp4decrypt(path.join(__dirname, 'media', t.encrypted), path.join(__dirname, 'media', 'decrypted.mp4'), t.keys, decryptProgress)
   const decrypted = readFile('./decrypted.mp4')
 
   const srcSamples = await getSamples(src)

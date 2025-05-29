@@ -12,7 +12,8 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0
       cmake-js:
-        specifier: ^7.2.1
+        specifier: ^7.3.1
+
         version: 7.3.1
       node-addon-api:
         specifier: ^6.1.0
@@ -22,19 +23,19 @@ importers:
         specifier: ^1.5.5
         version: 1.5.5
       '@types/node':
-        specifier: ^20.11.30
+        specifier: ^20.17.52
         version: 20.17.52
       mp4box:
-        specifier: ^0.5.2
+        specifier: ^0.5.4
         version: 0.5.4
       standard:
-        specifier: ^17.1.0
+        specifier: ^17.1.2
         version: 17.1.2
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@20.17.52)(typescript@5.8.3)
       typescript:
-        specifier: ^5.4.3
+        specifier: ^5.8.3
         version: 5.8.3
 
 packages:

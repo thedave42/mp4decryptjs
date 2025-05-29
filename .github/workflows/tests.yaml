@@ -9,12 +9,17 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    name: Build and Test
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [22.x, 24.x]
         os: [ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
