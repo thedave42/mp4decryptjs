@@ -1,11 +1,12 @@
 {
-  "name": "mp4decryptjs",
-  "version": "1.0.2",
+  "name": "@thedave42/mp4decryptjs",
+  "version": "1.0.3",
   "description": "Native NodeJS module to decrypt media",
   "main": "lib/index.js",
   "scripts": {
     "setup": "git submodule update --init",
     "install": "cmake-js compile",
+    "lint": "standard --fix",
     "test": "standard && node test/tests.js",
     "prepublish": "npx tsc"
   },
