@@ -6,6 +6,7 @@
   "scripts": {
     "setup": "git submodule update --init",
     "install": "cmake-js compile",
+    "lint": "standard --fix",
     "test": "standard && node test/tests.js",
     "prepublish": "npx tsc"
   },
