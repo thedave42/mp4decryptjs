@@ -1,5 +1,5 @@
 {
-  "name": "mp4decryptjs",
+  "name": "@thedave42/mp4decryptjs",
   "version": "1.0.2",
   "description": "Native NodeJS module to decrypt media",
   "main": "lib/index.js",
